@@ -1,0 +1,71 @@
+<ng-template #divLoading >
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</ng-template>
+
+
+<div *ngIf="movie; else divLoading" class="grid mt-2 p-2 container">
+  <mat-card class="card-container">
+    <mat-card-header>
+      <mat-card-title #pageTitle><span>{{ movie.title }}</span></mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="content-container">
+      <img  [src]=" movie.poster" [alt]="movie.title" mat-card-image class="ml-2">
+
+      <mat-card class="col-6 sm:col-3">
+        <mat-card-header>
+          <mat-card-title class="infoTitle">Información</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+          <mat-list>
+            <mat-list-item><strong>Director</strong> {{ movie.director }}</mat-list-item>
+            <mat-list-item><strong>Actores: </strong></mat-list-item>
+            <mat-chip-listbox>
+              <mat-chip *ngFor="let name of movie.actors">
+                {{ name }}
+              </mat-chip>
+            </mat-chip-listbox>
+            <mat-list-item><strong>Fecha de estreno:</strong> {{ movie.releaseDate }}</mat-list-item>
+            <mat-list-item><strong>Generos:</strong></mat-list-item>
+            <mat-chip-listbox>
+              <mat-chip *ngFor="let name of movie.genres">
+                {{ name }}
+              </mat-chip>
+            </mat-chip-listbox>
+          </mat-list>
+
+        </mat-card-content>
+        <mat-card-actions>
+          <span class="spacer"></span>
+          <button
+          mat-button
+          color="warn"
+          (click)="goBack()">
+            Regresar
+          </button>
+          <span class="spacer"></span>
+        </mat-card-actions>
+      </mat-card>
+
+      <mat-card class="col-6 sm:col-3">
+        <mat-card-header>
+          <mat-card-title class="infoTitle">Reviews</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <div *ngFor="let review of reviews" >
+            <movie-review-panel [review]="review"></movie-review-panel>
+          </div>
+        </mat-card-content>
+          <!-- Botón para añadir una nueva review -->
+          <button mat-raised-button color="primary" class="add-review-button" (click)="openAddReviewForm()">Añadir Review</button>
+      </mat-card>
+
+
+    </mat-card-content>
+  </mat-card>
+</div>

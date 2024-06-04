@@ -1,0 +1,42 @@
+.review-panel {
+  background-color: #292929;
+  color: aliceblue;
+  border: 1px solid #292929; /* Añade un borde del mismo color que el fondo para distinguir el panel */
+  margin-bottom: 10px; /* Agrega un espacio entre los paneles */
+}
+
+.review-panel mat-panel-title {
+  display: flex;
+  align-items: center;
+}
+
+.review-panel img {
+  width: 50px; /* Ajusta el ancho de la imagen del usuario */
+  height: 50px; /* Ajusta el alto de la imagen del usuario */
+  border-radius: 50%; /* Hace que la imagen del usuario sea redonda */
+  margin-right: 10px; /* Agrega un espacio entre la imagen y el texto */
+  flex-shrink: 0; /* Evita que la imagen se contraiga para centrarse */
+}
+
+
+.review-panel span.spacer {
+  flex-grow: 1; /* Hace que este elemento ocupe todo el espacio disponible */
+}
+
+.review-panel mat-icon {
+  font-size: 1.5em; /* Ajusta el tamaño de las estrellas */
+  color: gold; /* Cambia el color de las estrellas */
+}
+
+.review-panel p {
+  margin: 10px;
+  color: #aaa; /* Añade un espacio interno alrededor del texto */
+}
+
+span{
+  color: #fff;
+  }
+.title{
+  margin-left: 20px;
+
+}

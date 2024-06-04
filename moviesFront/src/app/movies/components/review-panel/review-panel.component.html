@@ -1,0 +1,14 @@
+<mat-expansion-panel class="review-panel">
+  <mat-expansion-panel-header (click)="togglePanel()">
+    <mat-panel-title>
+      <div mat-card-avatar>
+        <img [src]="this.user?.profileImg | profileImg" alt="User Image">
+      </div>
+      <span class="title">{{ this.user?.name }}</span>
+      <span class="spacer"></span>
+      <mat-icon *ngFor="let star of getUserRatingStars()">star</mat-icon>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <p>{{ review.comment }}</p>
+  <!-- Otros detalles de la revisión si es necesario -->
+</mat-expansion-panel>

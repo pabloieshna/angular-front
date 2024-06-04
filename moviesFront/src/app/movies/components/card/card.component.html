@@ -1,0 +1,26 @@
+<mat-card>
+  <div class="image-container">
+    <img mat-card-image class="background-image" [src]="movie.poster" [alt]="movie.title">
+    <mat-icon (click)="addFavorite()" class="icon-overlay">turned_in</mat-icon>
+    <mat-icon (click)="addFavorite()" class="icon-add-overlay">add</mat-icon>
+  </div>
+  <mat-card-header>
+    <mat-card-title>{{ movie.title }}</mat-card-title>
+    <mat-card-subtitle><strong>Fecha de estreno: </strong> {{ movie.releaseDate}}</mat-card-subtitle>
+  </mat-card-header>
+
+  <mat-divider></mat-divider>
+
+  <mat-card-actions>
+    <button mat-button mat-raised color="primary">
+      <a [href]='movie.trailerLink' target="_blank">Ver tráiler</a>
+      <mat-icon>launch</mat-icon>
+    </button>
+
+    <span class="spacer"></span>
+
+    <button mat-icon-button mat-raised [routerLink]="['/movies', movie.imdbId]">
+      <mat-icon>info</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>

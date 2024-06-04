@@ -1,0 +1,16 @@
+.container{
+  overflow: hidden;
+  background-color: #191919;
+}
+
+img{
+  height: 100%;
+}
+mat-toolbar{
+  background-color: black;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+button, span{ color: white; }
