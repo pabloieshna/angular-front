@@ -1,0 +1,143 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.user-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 800px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #1c1c1c;
+  color: aliceblue;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.img-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.img-container img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.3s;
+}
+
+.img-container .camera-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: white;
+  font-size: 32px;
+}
+
+.img-container.editable:hover img {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.img-container.editable:hover .camera-icon {
+  opacity: 1;
+  cursor: pointer;
+}
+
+mat-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+mat-card-title, mat-card-subtitle {
+  text-align: center;
+  width: 100%;
+  margin: 0;
+}
+
+mat-card-title input, mat-card-subtitle input {
+  width: 100%;
+  text-align: center;
+  border: none;
+  background-color: transparent;
+  color: aliceblue;
+}
+
+mat-card-title input[readonly], mat-card-subtitle input[readonly] {
+  cursor: default;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center;
+  overflow: hidden;
+}
+
+mat-card-content p {
+  margin: 0 0 15px;
+}
+
+mat-card-content input,
+mat-card-content textarea {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: aliceblue;
+}
+
+mat-card-content textarea {
+  resize: none;
+  height: 100px;
+}
+
+button {
+  margin-top: 20px;
+  background-color: #ff5722;
+  color: aliceblue;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+mat-card-subtitle {
+  color: #b0b0b0;
+}

@@ -1,0 +1,15 @@
+import { Movie } from "../../movies/interfaces/movie.inteface";
+
+export interface UserProfile {
+  _id:      string;
+  email:    string;
+  name:     string;
+  username?: string;
+  joinedDate: Date;
+  favoriteGenres?: [string];
+  favoriteMovies?: [string];
+  bio?: string;
+  profileImg?: string;
+  isActive: boolean;
+  roles:    string[];
+}

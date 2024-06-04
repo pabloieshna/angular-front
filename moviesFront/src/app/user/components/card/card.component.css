@@ -1,0 +1,57 @@
+mat-card {
+  margin: 10px;
+  width: 100%;
+  max-width: 280px; /* Anchura máxima */
+}
+
+.image-container {
+  position: relative;
+  padding: 0;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(45vw - 20px); /* Altura relativa basada en el ancho de la pantalla */
+  max-height: 300px; /* Altura máxima */
+}
+
+.background-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: fill; /* Ajusta la imagen al contenedor manteniendo la relación de aspecto */
+}
+
+mat-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+mat-card-title {
+  font-size: calc(0.5vw + 0.8rem); /* Ajusta el tamaño de la fuente */
+}
+
+mat-card-subtitle {
+  font-size: calc(0.4vw + 0.6rem); /* Ajusta el tamaño de la fuente */
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: gray;
+}
+
+a:hover {
+  color: black;
+}
+
+mat-icon {
+  cursor: pointer;
+}
+
